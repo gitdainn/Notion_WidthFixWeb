@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>테스트</title>
+
+    <style>
+        :root {
+            --stage-w: 1440px;
+            --iframe-h: 3000px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            color: #e8e8e8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 16px;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+
+        .hint {
+            width: min(var(--stage-w), 100%);
+            font: 13px/1.45 system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+            opacity: .85;
+        }
+
+        .stage {
+            width: var(--stage-w);
+            overflow: visible;
+        }
+
+            .stage iframe {
+                width: 100%;
+                height: var(--iframe-h);
+                border: 0;
+                display: block;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+                .stage iframe::-webkit-scrollbar {
+                    width: 0;
+                    height: 0;
+                }
+    </style>
+</head>
+
+<body>
+    <div class="stage" role="region" aria-label="Notion fixed embed">
+        <!-- 노션 임베드 링크 삽입 -->
+        <iframe src="https://cookie-orchid-025.notion.site/ebd//10e6974c62c680f5a589f8b811024ff1"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allow="clipboard-read; clipboard-write; fullscreen"
+                scrolling="no"></iframe>
+    </div>
+</body>
+</html>
